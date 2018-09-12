@@ -28,3 +28,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ######## to Run Dockerfile 
 command: docker build -t testapp -f dockerfile .
+
+###### COMMAND TO TEST NGINX WORK OR NOT 
+docker run -p 80:80 testapp
+
+open web with address localhost 
+
+testcase: 
+    show "Welcome to test-docker!" : test pass!
+    show 403                       : test failed!
