@@ -23,7 +23,7 @@ RUN $(npm bin)/ng build --prod
 FROM nginx:alpine
 
 ## Copy our default nginx config
-COPY /nginx/default.conf /etc/nginx/conf.d/
+COPY nginx-custom.conf /etc/nginx/conf.d/
 
 ## Remove default nginx website
 RUN rm -rf /usr/share/nginx/html/*
